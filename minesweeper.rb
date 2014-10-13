@@ -13,21 +13,21 @@ class Game
       @board.render
       puts "Do you want to reveal(R) or flag(F)?"
       action = gets.chomp
-      puts "On which square (row, col)? Separate with comma and space."
-      square_coords = gets.chomp.split(', ')
+      puts "On which square (row, col)? Separate with comma."
+      square_coords = gets.chomp.split(',')
       if action.upcase == "R"
         @board.pos(square_coords[0].to_i, square_coords[1].to_i).reveal
       elsif action.upcase == "F"
         @board.pos(square_coords[0].to_i, square_coords[1].to_i).flag
       else
-        puts "Try again, foo!"
+        puts "Invalid entry, try again."
       end
-      break if @board.over?
+      break if @board.lost? || @board.won?
     end
-    if true
-      puts "You rock, guey!"
+    if @board.won?
+      puts "You won!"
     else
-      puts "Try again. :("
+      puts "You lost :("
     end
   end
   
@@ -88,8 +88,18 @@ class Board
     @over = true
   end
   
-  def over?
+  def lost?
     @over
+  end
+  
+  def won?
+    unrevealed_tiles = 0
+    (0..8).each do |x|
+      (0..8).each do |y|
+        unrevealed_tiles += 1 if !(@board[y][x].revealed)
+      end
+    end
+    unrevealed_tiles == 10
   end
   
 end
