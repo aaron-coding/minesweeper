@@ -1,33 +1,49 @@
+require 'yaml'
+
 class Game
   def initialize 
     @board = Board.new
   end
   
   def save
-    
+    File.open('saved-game.txt', 'w') do |f|
+      f.puts @board.to_yaml
+    end
   end
   
   def start
     puts "Welcome to your worst enemy in hell: Minesweeper"
     loop do
       @board.render
-      puts "Do you want to reveal(R) or flag(F)?"
+      puts "Do you want to reveal(R), flag(F), save(S), or load(L)?"
       action = gets.chomp
+      unless ["R","F","S","L"].include?(action.upcase)
+        puts "Invalid Entry"
+        next
+      end
+      if action.upcase == "S"
+        save
+        break
+      elsif action.upcase == "L"
+        #load
+        break
+      end
+      
       puts "On which square (row, col)? Separate with comma."
       square_coords = gets.chomp.split(',')
       if action.upcase == "R"
         @board.pos(square_coords[0].to_i, square_coords[1].to_i).reveal
       elsif action.upcase == "F"
         @board.pos(square_coords[0].to_i, square_coords[1].to_i).flag
-      else
-        puts "Invalid entry, try again."
       end
       break if @board.lost? || @board.won?
     end
     if @board.won?
       puts "You won!"
-    else
+    elsif @board.lost?
       puts "You lost :("
+    else
+      puts "See you soon.... Enjoy living for now." 
     end
   end
   

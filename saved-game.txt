@@ -1,0 +1,1414 @@
+--- &70310034370840 !ruby/object:Board
+board:
+- - !ruby/object:Tile
+    pos:
+    - 0
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 3
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - &70310034363380 !ruby/object:Tile
+    pos:
+    - 0
+    - 4
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - &70310034362200 !ruby/object:Tile
+    pos:
+    - 0
+    - 5
+    bombed: true
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - &70310034350480 !ruby/object:Tile
+    pos:
+    - 0
+    - 6
+    bombed: false
+    flagged: false
+    revealed: true
+    board_obj: *70310034370840
+    DELTAS:
+    - - 0
+      - -1
+    - - 1
+      - -1
+    - - 1
+      - 0
+    - - 1
+      - 1
+    - - 0
+      - 1
+    - - -1
+      - 1
+    - - -1
+      - 0
+    - - -1
+      - -1
+    neighbors:
+    - *70310034362200
+    - &70310034362120 !ruby/object:Tile
+      pos:
+      - 1
+      - 5
+      bombed: false
+      flagged: false
+      revealed: true
+      board_obj: *70310034370840
+      DELTAS:
+      - - 0
+        - -1
+      - - 1
+        - -1
+      - - 1
+        - 0
+      - - 1
+        - 1
+      - - 0
+        - 1
+      - - -1
+        - 1
+      - - -1
+        - 0
+      - - -1
+        - -1
+      neighbors:
+      - &70310034363140 !ruby/object:Tile
+        pos:
+        - 1
+        - 4
+        bombed: false
+        flagged: false
+        revealed: false
+        board_obj: *70310034370840
+      - &70310034362880 !ruby/object:Tile
+        pos:
+        - 2
+        - 4
+        bombed: false
+        flagged: false
+        revealed: false
+        board_obj: *70310034370840
+      - &70310034351040 !ruby/object:Tile
+        pos:
+        - 2
+        - 5
+        bombed: false
+        flagged: false
+        revealed: true
+        board_obj: *70310034370840
+        DELTAS:
+        - - 0
+          - -1
+        - - 1
+          - -1
+        - - 1
+          - 0
+        - - 1
+          - 1
+        - - 0
+          - 1
+        - - -1
+          - 1
+        - - -1
+          - 0
+        - - -1
+          - -1
+        neighbors:
+        - *70310034362880
+        - &70310034362720 !ruby/object:Tile
+          pos:
+          - 3
+          - 4
+          bombed: true
+          flagged: false
+          revealed: false
+          board_obj: *70310034370840
+        - &70310034351000 !ruby/object:Tile
+          pos:
+          - 3
+          - 5
+          bombed: false
+          flagged: false
+          revealed: true
+          board_obj: *70310034370840
+          DELTAS:
+          - - 0
+            - -1
+          - - 1
+            - -1
+          - - 1
+            - 0
+          - - 1
+            - 1
+          - - 0
+            - 1
+          - - -1
+            - 1
+          - - -1
+            - 0
+          - - -1
+            - -1
+          neighbors:
+          - *70310034362720
+          - &70310034362580 !ruby/object:Tile
+            pos:
+            - 4
+            - 4
+            bombed: true
+            flagged: false
+            revealed: false
+            board_obj: *70310034370840
+          - &70310034350960 !ruby/object:Tile
+            pos:
+            - 4
+            - 5
+            bombed: false
+            flagged: false
+            revealed: true
+            board_obj: *70310034370840
+            DELTAS:
+            - - 0
+              - -1
+            - - 1
+              - -1
+            - - 1
+              - 0
+            - - 1
+              - 1
+            - - 0
+              - 1
+            - - -1
+              - 1
+            - - -1
+              - 0
+            - - -1
+              - -1
+            neighbors:
+            - *70310034362580
+            - &70310034362440 !ruby/object:Tile
+              pos:
+              - 5
+              - 4
+              bombed: false
+              flagged: false
+              revealed: false
+              board_obj: *70310034370840
+            - &70310034350920 !ruby/object:Tile
+              pos:
+              - 5
+              - 5
+              bombed: true
+              flagged: false
+              revealed: false
+              board_obj: *70310034370840
+            - &70310034350240 !ruby/object:Tile
+              pos:
+              - 5
+              - 6
+              bombed: false
+              flagged: false
+              revealed: true
+              board_obj: *70310034370840
+              DELTAS:
+              - - 0
+                - -1
+              - - 1
+                - -1
+              - - 1
+                - 0
+              - - 1
+                - 1
+              - - 0
+                - 1
+              - - -1
+                - 1
+              - - -1
+                - 0
+              - - -1
+                - -1
+              neighbors:
+              - *70310034350920
+              - &70310034350880 !ruby/object:Tile
+                pos:
+                - 6
+                - 5
+                bombed: false
+                flagged: false
+                revealed: false
+                board_obj: *70310034370840
+              - &70310034350180 !ruby/object:Tile
+                pos:
+                - 6
+                - 6
+                bombed: false
+                flagged: false
+                revealed: true
+                board_obj: *70310034370840
+                DELTAS:
+                - - 0
+                  - -1
+                - - 1
+                  - -1
+                - - 1
+                  - 0
+                - - 1
+                  - 1
+                - - 0
+                  - 1
+                - - -1
+                  - 1
+                - - -1
+                  - 0
+                - - -1
+                  - -1
+                neighbors:
+                - *70310034350880
+                - &70310034350800 !ruby/object:Tile
+                  pos:
+                  - 7
+                  - 5
+                  bombed: true
+                  flagged: false
+                  revealed: false
+                  board_obj: *70310034370840
+                - &70310034350100 !ruby/object:Tile
+                  pos:
+                  - 7
+                  - 6
+                  bombed: false
+                  flagged: false
+                  revealed: true
+                  board_obj: *70310034370840
+                  DELTAS:
+                  - - 0
+                    - -1
+                  - - 1
+                    - -1
+                  - - 1
+                    - 0
+                  - - 1
+                    - 1
+                  - - 0
+                    - 1
+                  - - -1
+                    - 1
+                  - - -1
+                    - 0
+                  - - -1
+                    - -1
+                  neighbors:
+                  - *70310034350800
+                  - &70310034350600 !ruby/object:Tile
+                    pos:
+                    - 8
+                    - 5
+                    bombed: false
+                    flagged: false
+                    revealed: false
+                    board_obj: *70310034370840
+                  - &70310034350060 !ruby/object:Tile
+                    pos:
+                    - 8
+                    - 6
+                    bombed: false
+                    flagged: false
+                    revealed: true
+                    board_obj: *70310034370840
+                    DELTAS:
+                    - - 0
+                      - -1
+                    - - 1
+                      - -1
+                    - - 1
+                      - 0
+                    - - 1
+                      - 1
+                    - - 0
+                      - 1
+                    - - -1
+                      - 1
+                    - - -1
+                      - 0
+                    - - -1
+                      - -1
+                    neighbors:
+                    - *70310034350600
+                    - &70310034349640 !ruby/object:Tile
+                      pos:
+                      - 8
+                      - 7
+                      bombed: false
+                      flagged: false
+                      revealed: true
+                      board_obj: *70310034370840
+                      DELTAS:
+                      - - 0
+                        - -1
+                      - - 1
+                        - -1
+                      - - 1
+                        - 0
+                      - - 1
+                        - 1
+                      - - 0
+                        - 1
+                      - - -1
+                        - 1
+                      - - -1
+                        - 0
+                      - - -1
+                        - -1
+                      neighbors:
+                      - *70310034350060
+                      - &70310034348940 !ruby/object:Tile
+                        pos:
+                        - 8
+                        - 8
+                        bombed: false
+                        flagged: false
+                        revealed: true
+                        board_obj: *70310034370840
+                        DELTAS:
+                        - - 0
+                          - -1
+                        - - 1
+                          - -1
+                        - - 1
+                          - 0
+                        - - 1
+                          - 1
+                        - - 0
+                          - 1
+                        - - -1
+                          - 1
+                        - - -1
+                          - 0
+                        - - -1
+                          - -1
+                        neighbors:
+                        - *70310034349640
+                        - &70310034349060 !ruby/object:Tile
+                          pos:
+                          - 7
+                          - 8
+                          bombed: false
+                          flagged: false
+                          revealed: true
+                          board_obj: *70310034370840
+                          DELTAS:
+                          - - 0
+                            - -1
+                          - - 1
+                            - -1
+                          - - 1
+                            - 0
+                          - - 1
+                            - 1
+                          - - 0
+                            - 1
+                          - - -1
+                            - 1
+                          - - -1
+                            - 0
+                          - - -1
+                            - -1
+                          neighbors:
+                          - &70310034349680 !ruby/object:Tile
+                            pos:
+                            - 7
+                            - 7
+                            bombed: false
+                            flagged: false
+                            revealed: true
+                            board_obj: *70310034370840
+                            DELTAS:
+                            - - 0
+                              - -1
+                            - - 1
+                              - -1
+                            - - 1
+                              - 0
+                            - - 1
+                              - 1
+                            - - 0
+                              - 1
+                            - - -1
+                              - 1
+                            - - -1
+                              - 0
+                            - - -1
+                              - -1
+                            neighbors:
+                            - *70310034350100
+                            - *70310034350060
+                            - *70310034349640
+                            - *70310034348940
+                            - *70310034349060
+                            - &70310034349100 !ruby/object:Tile
+                              pos:
+                              - 6
+                              - 8
+                              bombed: false
+                              flagged: false
+                              revealed: true
+                              board_obj: *70310034370840
+                              DELTAS:
+                              - - 0
+                                - -1
+                              - - 1
+                                - -1
+                              - - 1
+                                - 0
+                              - - 1
+                                - 1
+                              - - 0
+                                - 1
+                              - - -1
+                                - 1
+                              - - -1
+                                - 0
+                              - - -1
+                                - -1
+                              neighbors:
+                              - &70310034349720 !ruby/object:Tile
+                                pos:
+                                - 6
+                                - 7
+                                bombed: false
+                                flagged: false
+                                revealed: true
+                                board_obj: *70310034370840
+                                DELTAS:
+                                - - 0
+                                  - -1
+                                - - 1
+                                  - -1
+                                - - 1
+                                  - 0
+                                - - 1
+                                  - 1
+                                - - 0
+                                  - 1
+                                - - -1
+                                  - 1
+                                - - -1
+                                  - 0
+                                - - -1
+                                  - -1
+                                neighbors:
+                                - *70310034350180
+                                - *70310034350100
+                                - *70310034349680
+                                - *70310034349060
+                                - *70310034349100
+                                - &70310034349180 !ruby/object:Tile
+                                  pos:
+                                  - 5
+                                  - 8
+                                  bombed: false
+                                  flagged: false
+                                  revealed: true
+                                  board_obj: *70310034370840
+                                  DELTAS:
+                                  - - 0
+                                    - -1
+                                  - - 1
+                                    - -1
+                                  - - 1
+                                    - 0
+                                  - - 1
+                                    - 1
+                                  - - 0
+                                    - 1
+                                  - - -1
+                                    - 1
+                                  - - -1
+                                    - 0
+                                  - - -1
+                                    - -1
+                                  neighbors:
+                                  - &70310034349780 !ruby/object:Tile
+                                    pos:
+                                    - 5
+                                    - 7
+                                    bombed: false
+                                    flagged: false
+                                    revealed: true
+                                    board_obj: *70310034370840
+                                    DELTAS:
+                                    - - 0
+                                      - -1
+                                    - - 1
+                                      - -1
+                                    - - 1
+                                      - 0
+                                    - - 1
+                                      - 1
+                                    - - 0
+                                      - 1
+                                    - - -1
+                                      - 1
+                                    - - -1
+                                      - 0
+                                    - - -1
+                                      - -1
+                                    neighbors:
+                                    - *70310034350240
+                                    - *70310034350180
+                                    - *70310034349720
+                                    - *70310034349100
+                                    - *70310034349180
+                                    - &70310034349240 !ruby/object:Tile
+                                      pos:
+                                      - 4
+                                      - 8
+                                      bombed: false
+                                      flagged: false
+                                      revealed: true
+                                      board_obj: *70310034370840
+                                      DELTAS:
+                                      - - 0
+                                        - -1
+                                      - - 1
+                                        - -1
+                                      - - 1
+                                        - 0
+                                      - - 1
+                                        - 1
+                                      - - 0
+                                        - 1
+                                      - - -1
+                                        - 1
+                                      - - -1
+                                        - 0
+                                      - - -1
+                                        - -1
+                                      neighbors:
+                                      - &70310034349840 !ruby/object:Tile
+                                        pos:
+                                        - 4
+                                        - 7
+                                        bombed: false
+                                        flagged: false
+                                        revealed: true
+                                        board_obj: *70310034370840
+                                        DELTAS:
+                                        - - 0
+                                          - -1
+                                        - - 1
+                                          - -1
+                                        - - 1
+                                          - 0
+                                        - - 1
+                                          - 1
+                                        - - 0
+                                          - 1
+                                        - - -1
+                                          - 1
+                                        - - -1
+                                          - 0
+                                        - - -1
+                                          - -1
+                                        neighbors:
+                                        - &70310034350280 !ruby/object:Tile
+                                          pos:
+                                          - 4
+                                          - 6
+                                          bombed: false
+                                          flagged: false
+                                          revealed: true
+                                          board_obj: *70310034370840
+                                          DELTAS:
+                                          - - 0
+                                            - -1
+                                          - - 1
+                                            - -1
+                                          - - 1
+                                            - 0
+                                          - - 1
+                                            - 1
+                                          - - 0
+                                            - 1
+                                          - - -1
+                                            - 1
+                                          - - -1
+                                            - 0
+                                          - - -1
+                                            - -1
+                                          neighbors:
+                                          - *70310034350960
+                                          - *70310034350920
+                                          - *70310034350240
+                                          - *70310034349780
+                                          - *70310034349840
+                                          - &70310034349880 !ruby/object:Tile
+                                            pos:
+                                            - 3
+                                            - 7
+                                            bombed: false
+                                            flagged: false
+                                            revealed: true
+                                            board_obj: *70310034370840
+                                            DELTAS:
+                                            - - 0
+                                              - -1
+                                            - - 1
+                                              - -1
+                                            - - 1
+                                              - 0
+                                            - - 1
+                                              - 1
+                                            - - 0
+                                              - 1
+                                            - - -1
+                                              - 1
+                                            - - -1
+                                              - 0
+                                            - - -1
+                                              - -1
+                                            neighbors:
+                                            - &70310034350360 !ruby/object:Tile
+                                              pos:
+                                              - 3
+                                              - 6
+                                              bombed: false
+                                              flagged: false
+                                              revealed: true
+                                              board_obj: *70310034370840
+                                              DELTAS:
+                                              - - 0
+                                                - -1
+                                              - - 1
+                                                - -1
+                                              - - 1
+                                                - 0
+                                              - - 1
+                                                - 1
+                                              - - 0
+                                                - 1
+                                              - - -1
+                                                - 1
+                                              - - -1
+                                                - 0
+                                              - - -1
+                                                - -1
+                                              neighbors:
+                                              - *70310034351000
+                                              - *70310034350960
+                                              - *70310034350280
+                                              - *70310034349840
+                                              - *70310034349880
+                                              - &70310034349920 !ruby/object:Tile
+                                                pos:
+                                                - 2
+                                                - 7
+                                                bombed: false
+                                                flagged: false
+                                                revealed: true
+                                                board_obj: *70310034370840
+                                                DELTAS:
+                                                - - 0
+                                                  - -1
+                                                - - 1
+                                                  - -1
+                                                - - 1
+                                                  - 0
+                                                - - 1
+                                                  - 1
+                                                - - 0
+                                                  - 1
+                                                - - -1
+                                                  - 1
+                                                - - -1
+                                                  - 0
+                                                - - -1
+                                                  - -1
+                                                neighbors:
+                                                - &70310034350400 !ruby/object:Tile
+                                                  pos:
+                                                  - 2
+                                                  - 6
+                                                  bombed: false
+                                                  flagged: false
+                                                  revealed: true
+                                                  board_obj: *70310034370840
+                                                  DELTAS:
+                                                  - - 0
+                                                    - -1
+                                                  - - 1
+                                                    - -1
+                                                  - - 1
+                                                    - 0
+                                                  - - 1
+                                                    - 1
+                                                  - - 0
+                                                    - 1
+                                                  - - -1
+                                                    - 1
+                                                  - - -1
+                                                    - 0
+                                                  - - -1
+                                                    - -1
+                                                  neighbors:
+                                                  - *70310034351040
+                                                  - *70310034351000
+                                                  - *70310034350360
+                                                  - *70310034349880
+                                                  - *70310034349920
+                                                  - &70310034349960 !ruby/object:Tile
+                                                    pos:
+                                                    - 1
+                                                    - 7
+                                                    bombed: false
+                                                    flagged: false
+                                                    revealed: true
+                                                    board_obj: *70310034370840
+                                                    DELTAS:
+                                                    - - 0
+                                                      - -1
+                                                    - - 1
+                                                      - -1
+                                                    - - 1
+                                                      - 0
+                                                    - - 1
+                                                      - 1
+                                                    - - 0
+                                                      - 1
+                                                    - - -1
+                                                      - 1
+                                                    - - -1
+                                                      - 0
+                                                    - - -1
+                                                      - -1
+                                                    neighbors:
+                                                    - &70310034350440 !ruby/object:Tile
+                                                      pos:
+                                                      - 1
+                                                      - 6
+                                                      bombed: false
+                                                      flagged: false
+                                                      revealed: true
+                                                      board_obj: *70310034370840
+                                                      DELTAS:
+                                                      - - 0
+                                                        - -1
+                                                      - - 1
+                                                        - -1
+                                                      - - 1
+                                                        - 0
+                                                      - - 1
+                                                        - 1
+                                                      - - 0
+                                                        - 1
+                                                      - - -1
+                                                        - 1
+                                                      - - -1
+                                                        - 0
+                                                      - - -1
+                                                        - -1
+                                                      neighbors:
+                                                      - *70310034362120
+                                                      - *70310034351040
+                                                      - *70310034350400
+                                                      - *70310034349920
+                                                      - *70310034349960
+                                                      - &70310034350000 !ruby/object:Tile
+                                                        pos:
+                                                        - 0
+                                                        - 7
+                                                        bombed: false
+                                                        flagged: false
+                                                        revealed: true
+                                                        board_obj: *70310034370840
+                                                        DELTAS:
+                                                        - - 0
+                                                          - -1
+                                                        - - 1
+                                                          - -1
+                                                        - - 1
+                                                          - 0
+                                                        - - 1
+                                                          - 1
+                                                        - - 0
+                                                          - 1
+                                                        - - -1
+                                                          - 1
+                                                        - - -1
+                                                          - 0
+                                                        - - -1
+                                                          - -1
+                                                        neighbors:
+                                                        - *70310034350480
+                                                        - *70310034350440
+                                                        - *70310034349960
+                                                        - &70310034349420 !ruby/object:Tile
+                                                          pos:
+                                                          - 1
+                                                          - 8
+                                                          bombed: false
+                                                          flagged: false
+                                                          revealed: true
+                                                          board_obj: *70310034370840
+                                                          DELTAS:
+                                                          - - 0
+                                                            - -1
+                                                          - - 1
+                                                            - -1
+                                                          - - 1
+                                                            - 0
+                                                          - - 1
+                                                            - 1
+                                                          - - 0
+                                                            - 1
+                                                          - - -1
+                                                            - 1
+                                                          - - -1
+                                                            - 0
+                                                          - - -1
+                                                            - -1
+                                                          neighbors:
+                                                          - *70310034349960
+                                                          - *70310034349920
+                                                          - &70310034349360 !ruby/object:Tile
+                                                            pos:
+                                                            - 2
+                                                            - 8
+                                                            bombed: false
+                                                            flagged: false
+                                                            revealed: true
+                                                            board_obj: *70310034370840
+                                                            DELTAS:
+                                                            - - 0
+                                                              - -1
+                                                            - - 1
+                                                              - -1
+                                                            - - 1
+                                                              - 0
+                                                            - - 1
+                                                              - 1
+                                                            - - 0
+                                                              - 1
+                                                            - - -1
+                                                              - 1
+                                                            - - -1
+                                                              - 0
+                                                            - - -1
+                                                              - -1
+                                                            neighbors:
+                                                            - *70310034349920
+                                                            - *70310034349880
+                                                            - &70310034349300 !ruby/object:Tile
+                                                              pos:
+                                                              - 3
+                                                              - 8
+                                                              bombed: false
+                                                              flagged: false
+                                                              revealed: true
+                                                              board_obj: *70310034370840
+                                                              DELTAS:
+                                                              - - 0
+                                                                - -1
+                                                              - - 1
+                                                                - -1
+                                                              - - 1
+                                                                - 0
+                                                              - - 1
+                                                                - 1
+                                                              - - 0
+                                                                - 1
+                                                              - - -1
+                                                                - 1
+                                                              - - -1
+                                                                - 0
+                                                              - - -1
+                                                                - -1
+                                                              neighbors:
+                                                              - *70310034349880
+                                                              - *70310034349840
+                                                              - *70310034349240
+                                                              - *70310034349360
+                                                              - *70310034349920
+                                                            - *70310034349420
+                                                            - *70310034349960
+                                                          - &70310034349520 !ruby/object:Tile
+                                                            pos:
+                                                            - 0
+                                                            - 8
+                                                            bombed: false
+                                                            flagged: false
+                                                            revealed: true
+                                                            board_obj: *70310034370840
+                                                            DELTAS:
+                                                            - - 0
+                                                              - -1
+                                                            - - 1
+                                                              - -1
+                                                            - - 1
+                                                              - 0
+                                                            - - 1
+                                                              - 1
+                                                            - - 0
+                                                              - 1
+                                                            - - -1
+                                                              - 1
+                                                            - - -1
+                                                              - 0
+                                                            - - -1
+                                                              - -1
+                                                            neighbors:
+                                                            - *70310034350000
+                                                            - *70310034349960
+                                                            - *70310034349420
+                                                          - *70310034350000
+                                                        - *70310034349520
+                                                      - *70310034350480
+                                                      - *70310034362200
+                                                    - *70310034350400
+                                                    - *70310034349920
+                                                    - *70310034349360
+                                                    - *70310034349420
+                                                    - *70310034349520
+                                                    - *70310034350000
+                                                    - *70310034350480
+                                                  - *70310034350440
+                                                  - *70310034362120
+                                                - *70310034350360
+                                                - *70310034349880
+                                                - *70310034349300
+                                                - *70310034349360
+                                                - *70310034349420
+                                                - *70310034349960
+                                                - *70310034350440
+                                              - *70310034350400
+                                              - *70310034351040
+                                            - *70310034350280
+                                            - *70310034349840
+                                            - *70310034349240
+                                            - *70310034349300
+                                            - *70310034349360
+                                            - *70310034349920
+                                            - *70310034350400
+                                          - *70310034350360
+                                          - *70310034351000
+                                        - *70310034350240
+                                        - *70310034349780
+                                        - *70310034349180
+                                        - *70310034349240
+                                        - *70310034349300
+                                        - *70310034349880
+                                        - *70310034350360
+                                      - *70310034349780
+                                      - *70310034349180
+                                      - *70310034349300
+                                      - *70310034349880
+                                    - *70310034349840
+                                    - *70310034350280
+                                  - *70310034349720
+                                  - *70310034349100
+                                  - *70310034349240
+                                  - *70310034349840
+                                - *70310034349780
+                                - *70310034350240
+                              - *70310034349680
+                              - *70310034349060
+                              - *70310034349180
+                              - *70310034349780
+                            - *70310034349720
+                            - *70310034350180
+                          - *70310034349640
+                          - *70310034348940
+                          - *70310034349100
+                          - *70310034349720
+                        - *70310034349680
+                      - *70310034349060
+                      - *70310034349680
+                      - *70310034350100
+                    - *70310034349680
+                    - *70310034350100
+                    - *70310034350800
+                  - *70310034349640
+                  - *70310034349680
+                  - *70310034349720
+                  - *70310034350180
+                  - *70310034350880
+                - *70310034349680
+                - *70310034349720
+                - *70310034349780
+                - *70310034350240
+                - *70310034350920
+              - *70310034349720
+              - *70310034349780
+              - *70310034349840
+              - *70310034350280
+              - *70310034350960
+            - *70310034350280
+            - *70310034350360
+            - *70310034351000
+            - *70310034362720
+          - *70310034350280
+          - *70310034350360
+          - *70310034350400
+          - *70310034351040
+          - *70310034362880
+        - *70310034350360
+        - *70310034350400
+        - *70310034350440
+        - *70310034362120
+        - *70310034363140
+      - *70310034350400
+      - *70310034350440
+      - *70310034350480
+      - *70310034362200
+      - *70310034363380
+    - *70310034350440
+    - *70310034349960
+    - *70310034350000
+  - *70310034350000
+  - *70310034349520
+- - !ruby/object:Tile
+    pos:
+    - 1
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 3
+    bombed: true
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034363140
+  - *70310034362120
+  - *70310034350440
+  - *70310034349960
+  - *70310034349420
+- - !ruby/object:Tile
+    pos:
+    - 2
+    - 0
+    bombed: true
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 2
+    bombed: true
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 3
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034362880
+  - *70310034351040
+  - *70310034350400
+  - *70310034349920
+  - *70310034349360
+- - !ruby/object:Tile
+    pos:
+    - 3
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 3
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034362720
+  - *70310034351000
+  - *70310034350360
+  - *70310034349880
+  - *70310034349300
+- - !ruby/object:Tile
+    pos:
+    - 4
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 3
+    bombed: true
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034362580
+  - *70310034350960
+  - *70310034350280
+  - *70310034349840
+  - *70310034349240
+- - !ruby/object:Tile
+    pos:
+    - 5
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 3
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034362440
+  - *70310034350920
+  - *70310034350240
+  - *70310034349780
+  - *70310034349180
+- - !ruby/object:Tile
+    pos:
+    - 6
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 3
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 4
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034350880
+  - *70310034350180
+  - *70310034349720
+  - *70310034349100
+- - !ruby/object:Tile
+    pos:
+    - 7
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 3
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 4
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034350800
+  - *70310034350100
+  - *70310034349680
+  - *70310034349060
+- - !ruby/object:Tile
+    pos:
+    - 8
+    - 0
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 1
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 2
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 3
+    bombed: false
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 4
+    bombed: true
+    flagged: false
+    revealed: false
+    board_obj: *70310034370840
+  - *70310034350600
+  - *70310034350060
+  - *70310034349640
+  - *70310034348940
+over: false
