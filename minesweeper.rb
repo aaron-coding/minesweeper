@@ -4,13 +4,7 @@ class Game
   def initialize 
     @board = Board.new
   end
-  
-  def save
-    File.open('saved-game.txt', 'w') do |f|
-      f.puts @board.to_yaml
-    end
-  end
-  
+
   def start
     puts "Welcome to your worst enemy in hell: Minesweeper"
     loop do
@@ -25,7 +19,7 @@ class Game
         save
         break
       elsif action.upcase == "L"
-        #load
+        load
         break
       end
       
@@ -46,6 +40,21 @@ class Game
       puts "See you soon.... Enjoy living for now." 
     end
   end
+  
+  
+  def save
+    File.open('saved-game.txt', 'w') do |f|
+      f.puts @board.to_yaml
+    end
+  end
+  
+  def load
+    puts "Loading file"
+    @board = YAML.load_file('saved-game.txt') 
+  end
+        
+
+
   
 end
 
