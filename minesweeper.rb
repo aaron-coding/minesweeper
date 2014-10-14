@@ -93,14 +93,15 @@ class Board
   end
   
   def render
-    @board.each do |col|
+    
+    @board.each_with_index do |col, c_idx|
       row = []
-      col.each do |tile|
+      col.each_with_index do |tile, t_idx|
         row << tile
       end
-      p row
-    end       
-    
+      p "#{row.inspect} #{c_idx}"  
+    end     
+    p " 0  1  2  3  4  5  6  7  8   "
   end
     
   def pos(row, col)
