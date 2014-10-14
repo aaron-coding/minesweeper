@@ -5,7 +5,7 @@ class Game
     @board = Board.new
   end
 
-  def start
+  def start # break into helpers
     puts "Welcome to your worst enemy in hell: Minesweeper"
     loop do
       @board.render
@@ -24,11 +24,11 @@ class Game
       end
       
       puts "On which square (row, col)? Separate with comma."
-      square_coords = gets.chomp.split(',')
+      square_coords = gets.chomp.split(',').map(&:to_i)
       if action.upcase == "R"
-        @board.pos(square_coords[0].to_i, square_coords[1].to_i).reveal
+        @board.pos(square_coords[0], square_coords[1]).reveal
       elsif action.upcase == "F"
-        @board.pos(square_coords[0].to_i, square_coords[1].to_i).flag
+        @board.pos(square_coords[0], square_coords[1]).flag
       end
       break if @board.lost? || @board.won?
     end
@@ -61,14 +61,8 @@ end
 class Board
   
   def initialize
-    rows = Array.new(9) {[]}
-    cols = Array.new(9) {[]}
+    @board = Array.new(9) { Array.new(9) }
     
-    @board = rows.each_index do |row_idx|
-      cols.each_index do |col_idx|
-        cols[row_idx] << rows[col_idx]
-      end
-    end
     
     (0..8).each do |x|
       (0..8).each do |y|
@@ -101,6 +95,12 @@ class Board
     
   end
   
+  # def [](pos)
+  # end
+  #
+  # def []=(pos, val)
+  # end
+  
   def pos(row, col)
     @board[row][col]
   end
@@ -130,7 +130,10 @@ class Board
 end
 
 class Tile
+  DELTAS = [[0,-1], [1,-1], [1,0], [1,1], [0,1], [-1,1], [-1,0], [-1,-1]]
+  
   attr_reader :bombed, :revealed
+  
   def initialize(y, x, board_obj)
     @pos = [y,x]
     @bombed = false
@@ -149,7 +152,7 @@ class Tile
   
   def reveal
     
-    unless @flagged
+    unless @revealed || @flagged
       @revealed = true 
       if bombed?
         @board_obj.over
@@ -165,9 +168,8 @@ class Tile
   end
   
   def neighbors
-    @DELTAS = [[0,-1], [1,-1], [1,0], [1,1], [0,1], [-1,1], [-1,0], [-1,-1]]
     @neighbors = []
-    @DELTAS.each do |delta|
+    DELTAS.each do |delta|
       y, x = @pos[0] + delta[0], @pos[1] + delta[1]
       @neighbors << @board_obj.pos(y, x) if [x, y].all? {|el| el >= 0 && el <= 8}
     end
@@ -176,11 +178,7 @@ class Tile
 
   def neighbor_bomb_count
     n_array = self.neighbors
-    bomb_count = 0
-    n_array.each do |tile|
-      bomb_count += 1 if tile.bombed?
-    end
-    bomb_count
+    n_array.count { |tile| tile.bombed? }
   end
   
   def flag
