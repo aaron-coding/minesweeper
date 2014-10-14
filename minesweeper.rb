@@ -4,34 +4,8 @@ class Game
   def initialize 
     @board = Board.new
   end
-
-  def start # break into helpers
-    puts "Welcome to your worst enemy in hell: Minesweeper"
-    loop do
-      @board.render
-      puts "Do you want to reveal(R), flag(F), save(S), or load(L)?"
-      action = gets.chomp
-      unless ["R","F","S","L"].include?(action.upcase)
-        puts "Invalid Entry"
-        next
-      end
-      if action.upcase == "S"
-        save
-        break
-      elsif action.upcase == "L"
-        load
-        break
-      end
-      
-      puts "On which square (row, col)? Separate with comma."
-      square_coords = gets.chomp.split(',').map(&:to_i)
-      if action.upcase == "R"
-        @board.pos(square_coords[0], square_coords[1]).reveal
-      elsif action.upcase == "F"
-        @board.pos(square_coords[0], square_coords[1]).flag
-      end
-      break if @board.lost? || @board.won?
-    end
+  
+  def end_message
     if @board.won?
       puts "You won!"
     elsif @board.lost?
@@ -39,6 +13,40 @@ class Game
     else
       puts "See you soon.... Enjoy living for now." 
     end
+  end
+  
+  def get_action
+    puts "Do you want to reveal(R), flag(F), save(S), or load(L)?"
+    action = gets.chomp
+    until ["R","F","S","L"].include?(action.upcase)
+      puts "Invalid Entry. Try Again."
+      action = gets.chomp
+    end
+    if action.upcase == "S"
+      save
+    elsif action.upcase == "L"
+      load  
+    end
+    action.upcase
+  end
+  
+  def start # break into helpers
+    puts "Welcome to your worst enemy in hell: Minesweeper"
+    loop do
+      @board.render
+      action = get_action
+      if action == 'F' || action == 'R'
+        puts "On which square (row, col)? Separate with comma."
+        square_coords = gets.chomp.split(',').map(&:to_i)
+        if action.upcase == "R"
+          @board.pos(square_coords[0], square_coords[1]).reveal
+        elsif action.upcase == "F"
+          @board.pos(square_coords[0], square_coords[1]).flag
+        end
+      end
+      break if @board.lost? || @board.won?
+    end
+    end_message
   end
   
   
@@ -94,13 +102,7 @@ class Board
     end       
     
   end
-  
-  # def [](pos)
-  # end
-  #
-  # def []=(pos, val)
-  # end
-  
+    
   def pos(row, col)
     @board[row][col]
   end
