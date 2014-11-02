@@ -1,6 +1,6 @@
 require 'io/console'
 class Board
-  
+  attr_reader :pointer_pos
   def initialize(rows = 9, cols = 9, num_bombs = 10)
     @board = Array.new(rows) { Array.new(cols) }
     make_blank_tiles(rows, cols)
@@ -45,6 +45,8 @@ class Board
         when "D"
            @pointer_pos[1] -= 1
         end
+        system("clear")
+        render
       else
         case input #Navigation is also possible with "WASD"
         when "w" || "\e[A"
@@ -57,16 +59,18 @@ class Board
           @pointer_pos[1] += 1 
         when "f" #flag
           done = true
-          @board.pos(@pointer_pos[0], @pointer_pos[1]).flag
+          pos(@pointer_pos[0], @pointer_pos[1]).flag
         when "r" #reveal
           done = true
           pos(@pointer_pos[0], @pointer_pos[1]).reveal
         when "i"
           print_instructions
         end
-      end 
-      # p "pointer is now at #{@pointer_pos[0]}, #{@pointer_pos[1]}"
+        system("clear")
+        render if !done
+      end
     end
+
   end
   
   def print_instructions
@@ -74,19 +78,16 @@ class Board
     puts "Use the Arrow Keys or WASD keys to move."
     puts "Type R to reveal, or F to flag, I to repeat instructions"
   end
-  
-  
   def render
     @board.each_with_index do |col, c_idx|
       row = []
       col.each_with_index do |tile, t_idx|
-        row << tile
+        print tile.display
       end
-      p "#{row.inspect} #{c_idx}"  
-    end     
-    p " 0  1  2  3  4  5  6  7  8   "
+      puts "\n"
+    end
   end
-    
+      
   def pos(row, col)
     @board[row][col]
   end
@@ -103,10 +104,6 @@ class Board
     @over
   end
   
-  def reveal_all
-    
-  end
-  
   def won?
     unrevealed_tiles = 0
     (0..8).each do |x|
@@ -116,5 +113,4 @@ class Board
     end
     unrevealed_tiles == 10
   end
-  
 end

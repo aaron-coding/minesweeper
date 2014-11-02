@@ -7,8 +7,9 @@ class Game
     @board = Board.new(rows, cols, num_bombs)
   end
   
-  def start 
+  def start
     @board.print_instructions
+    system("clear")
     until @board.lost? || @board.won?
       @board.render
       @board.get_move
@@ -16,21 +17,6 @@ class Game
     end_message
   end
 
-  # def get_action
-  #   puts "Do you want to reveal(R), flag(F), save(S), or load(L)?"
-  #   action = gets.chomp
-  #   until ["R","F","S","L"].include?(action.upcase)
-  #     puts "Invalid Entry. Try Again."
-  #     action = gets.chomp
-  #   end
-  #   if action.upcase == "S"
-  #     save
-  #   elsif action.upcase == "L"
-  #     load
-  #   end
-  #   action.upcase
-  # end
-  
   def end_message
     if @board.won?
       puts "You won!"
@@ -41,10 +27,6 @@ class Game
       puts "See you soon.... Enjoy living for now." 
     end
   end
-  
-
-
-  
   
   def save
     File.open('saved-game.txt', 'w') do |f|
